@@ -217,7 +217,7 @@ body .left .img img {
 }
 
 .Content {
-    background-image: url('Mask group.png');
+    background-image: url('../img/Mask\ group.png');
     /* Đường dẫn đến ảnh */
     background-size: cover;
     /* Ảnh phủ kín toàn bộ màn hình */
@@ -300,7 +300,7 @@ body .left .img img {
     width: 100%;
     height: 440px;
     /* Điều chỉnh chiều cao phù hợp */
-    background-image: url('abc.png');
+    background-image: url('../img/abc.png');
     background-size: cover;
     background-position: center bottom;
     display: flex;
@@ -328,7 +328,7 @@ body .left .img img {
     width: 100%;
     height: 440px;
     /* Điều chỉnh chiều cao phù hợp */
-    background-image: url('Vector.png');
+    background-image: url('../img/Vector.png');
     background-size: cover;
     background-position: center bottom;
     display: flex;
@@ -353,7 +353,7 @@ body .left .img img {
     width: 100%;
     height: 440px;
     /* Điều chỉnh chiều cao phù hợp */
-    background-image: url('VectorFrame\ 28646528.png');
+    background-image: url('../img/VectorFrame\ 28646528.png');
     background-size: cover;
     background-position: center bottom;
     display: flex;
@@ -378,7 +378,7 @@ body .left .img img {
     width: 100%;
     height: 440px;
     /* Điều chỉnh chiều cao phù hợp */
-    background-image: url('VectorFrame\ 28646528.png');
+    background-image: url('../img/VectorFrame\ 28646528.png');
     background-size: cover;
     background-position: center bottom;
     display: flex;
