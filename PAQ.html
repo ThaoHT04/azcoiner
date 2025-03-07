@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAQ</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: "Space Grotesk", sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header + Footer */
+        .header-container,
+        .footer-container {
+            width: 100%;
+            text-align: center;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            border: none;
+        }
+
+        /* Căn chỉnh layout */
+        .content {
+            display: flex;
+            /* align-items: center; */
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+            flex-wrap: wrap;
+        }
+
+        .left {
+            text-align: center;
+        }
+
+        .left img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .right {
+            min-width: 300px;
+        }
+
+        .header {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        /* FAQ Container */
+        .faq-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            border: 2px solid transparent;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+        }
+
+        /* Khi câu hỏi được mở */
+        .faq-item.open {
+            border: 2px solid #1A74E4;
+            border-radius: 8px;
+        }
+
+        /* Câu hỏi */
+        .ques {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #1A74E4;
+            cursor: pointer;
+            /* border: 2px solid #1A74E4; */
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        /* Khi click vào câu hỏi, đổi màu nền */
+        .faq-item.open .ques {
+            color: #1A74E4;
+        }
+
+        /* Câu trả lời */
+        .answer {
+            display: none;
+            padding: 20px;
+            font-size: 17px;
+            font-weight: normal;
+            color: #353535;
+            border-radius: 8px;
+            font-family: "Space Grotesk", sans-serif;
+            line-height: 130%;
+            letter-spacing: 1px;
+            background-color: white;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Khi mở câu trả lời, hiển thị */
+        .faq-item.open .answer {
+            display: block;
+
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+                width: 100vw;
+
+            }
+
+            .faq-item,
+            .faq-container,
+            .faq-item p {
+                width: 100%;
+                max-width: 100vw;
+
+                text-align: center;
+            }
+
+
+
+            .right {
+                width: 80%;
+                max-width: 100vw;
+
+                text-align: center;
+            }
+
+            .right p {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ✅ Header -->
+    <div class="header-container">
+        <iframe src="menu.html" height=180px></iframe>
+    </div>
+
+    <div class="content">
+        <div class="left">
+            <img src="imgPA.png" alt="FAQ Image">
+        </div>
+
+        <div class="right">
+            <div style="height: 100px;"></div>
+            <p class="header">Frequently Asked Questions</p>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="ques" onclick="toggleFAQ(this)">
+                        <p class="question">What is Bitcoin?</p>
+                        <span class="toggle-btn">▼</span>
+                    </div>
+                    <div class="answer">
+                        <p>Bitcoin is a digital currency that operates on a peer-to-peer network, which means it's not
+                            controlled by any central authority. Users can send and receive Bitcoin directly, without
+                            intermediaries, making it a fast and low-cost way to transfer value. As one of the world's
+                            most popular crypto exchange platforms, AZCoiner makes it easy to buy and sell Bitcoin and
+                            hundreds of other cryptocurrencies.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="ques" onclick="toggleFAQ(this)">
+                        <p class="question">What is the value of the AZC token?</p>
+                        <span class="toggle-btn">▼</span>
+                    </div>
+                    <div class="answer">
+                        <p>The value of the AZC token depends on market supply and demand...</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="ques" onclick="toggleFAQ(this)">
+                        <p class="question">How can I use the services of AZCoiner?</p>
+                        <span class="toggle-btn">▼</span>
+                    </div>
+                    <div class="answer">
+                        <p>You can sign up, verify your identity, and start trading...</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="ques" onclick="toggleFAQ(this)">
+                        <p class="question">What services does AZCoiner provide?</p>
+                        <span class="toggle-btn">▼</span>
+                    </div>
+                    <div class="answer">
+                        <p>AZCoiner provides cryptocurrency exchange, wallet services...</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="ques" onclick="toggleFAQ(this)">
+                        <p class="question">How do I delete my AZCoiner account?</p>
+                        <span class="toggle-btn">▼</span>
+                    </div>
+                    <div class="answer">
+                        <p>You can request account deletion via our support team...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Footer -->
+    <div class="footer-container">
+        <iframe src="footer.html" height="250px"></iframe>
+    </div>
+
+    <script>
+        function toggleFAQ(element) {
+            const parent = element.parentElement;
+            parent.classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>

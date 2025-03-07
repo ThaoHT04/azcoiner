@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Footer */
+    footer {
+        width: 100%;
+        background-color: var(--footer);
+        text-align: center;
+        color: white;
+        position: relative;
+        bottom: 0;
+    }
+
+    footer img {
+        width: 100vw;
+        /* Chiếm toàn bộ chiều rộng màn hình */
+        max-width: 100%;
+        /* Đảm bảo không vượt quá kích thước màn hình */
+        height: auto;
+        /* Giữ nguyên tỉ lệ ảnh */
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        footer {
+            width: 100vw;
+            /* Đảm bảo footer luôn phủ toàn bộ chiều rộng màn hình */
+        }
+
+        footer img {
+            width: 100%;
+            /* Ảnh luôn phủ đủ chiều rộng footer */
+            max-width: 100vw;
+            /* Không cho phép ảnh bị co lại ngoài ý muốn */
+            height: auto;
+            /* Giữ tỉ lệ ảnh */
+            display: block;
+            /* Tránh lỗi khoảng trống xung quanh */
+        }
+    }
+</style>
+
+<body>
+    <footer>
+        <img src="Footer.png">
+    </footer>
+</body>
+
+</html>

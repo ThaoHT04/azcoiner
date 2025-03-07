@@ -1,0 +1,99 @@
+<style>
+    header {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        width: 100%;
+        max-width: 1200px;
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+    }
+
+    header img {
+        width: 120px;
+        height: auto;
+    }
+
+    .menu {
+        display: flex;
+        gap: 16px;
+    }
+
+    .menu a,
+    .menu select {
+        font-family: "Space Grotesk", sans-serif;
+        color: #333;
+        text-decoration: none;
+        border: none;
+        background-color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .menu a:hover,
+    .menu select:hover {
+        color: #007bff;
+    }
+
+    .hamburger {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu.show {
+            display: flex;
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
+</style>
+<header>
+    <img src="/logo_round 1.png">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="hompage.html" target="_top">HOME</a>
+        <select name="ECOSYSTEMItems" id="ECOSYSTEMItems">
+            <option>ECOSYSTEM</option>
+            <option>Web3 DeFi</option>
+            <option>AZC News</option>
+            <option>Social Mobile App</option>
+            <option>Crypto Services</option>
+        </select>
+        <select name="DOCUMENTS" id="DOCUMENTS">
+            <option>DOCUMENTS</option>
+            <option>White Paper</option>
+            <option>Pitch Deck</option>
+        </select>
+        <a href="#">ABOUT US</a>
+        <a href="PAQ.html" target="_top">FAQ</a>
+    </div>
+</header>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("show");
+    }
+</script>
