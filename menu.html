@@ -47,7 +47,7 @@
         cursor: pointer;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
         .menu {
             display: none;
             flex-direction: column;
@@ -94,6 +94,6 @@
 <script>
     function toggleMenu() {
         var menu = document.getElementById("menu");
-        menu.classList.toggle("show");
+        menu.classList.toggle("show");// kiểm tra nếu chưa có class show thì thêm có r thì bỏ
     }
 </script>
