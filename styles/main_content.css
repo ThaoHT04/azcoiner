@@ -79,3 +79,23 @@
     border: 1px #1A74E4 solid;
     color: #1A74E4;
 }
+
+.background1 {
+    background-image: url('/img/abc.png');
+    background-repeat: no-repeat;
+}
+
+.background2 {
+    background-image: url('/img/VectorFrame_28646527.png');
+    background-repeat: no-repeat;
+}
+
+.background3 {
+    background-image: url(/img/abc.png);
+    background-repeat: no-repeat;
+}
+
+.background4 {
+    background-image: url(/img/abc.png);
+    background-repeat: no-repeat;
+}
