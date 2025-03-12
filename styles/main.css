@@ -18,92 +18,6 @@
 }
 
 
-/* ✅ Responsive adjustments for mobile */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    header div {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        align-items: center;
-    }
-
-    header img {
-        width: 80px;
-    }
-
-    header select,
-    header span {
-        font-size: 12px;
-        padding: 5px 8px;
-    }
-
-    .container {
-        width: 100%;
-        flex-direction: column-reverse;
-        /* Đảo ngược vị trí */
-        align-items: center;
-        text-align: center;
-    }
-
-    .right {
-        order: -1;
-        /* Đẩy hình ảnh lên trên */
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .right .img {
-        display: flex;
-        justify-content: center;
-    }
-
-    .right img {
-        max-width: 90%;
-        height: auto;
-    }
-
-    .left {
-        order: 1;
-        /* Giữ phần nội dung ở dưới */
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Lưới nội dung chuyển sang 1 cột trên mobile */
-    .Content_conent {
-        display: grid;
-        grid-template-columns: 1fr !important;
-        padding: 20px;
-    }
-
-    .header_content_header {
-        font-size: 36px;
-    }
-
-    .header_content_content {
-        width: 90%;
-        font-size: 14px;
-    }
-
-    .Frame_28646530,
-    .Frame_28646529,
-    .Frame_28646528,
-    .Frame_28646527 {
-        top: 0;
-        height: auto;
-        padding: 20px;
-    }
-}
-
-
 
 html {
     background-color: var(--color-background-default);
@@ -128,6 +42,7 @@ html {
     width: 100%;
     padding-top: 50px;
     position: relative;
+
 }
 
 body .left {
@@ -138,6 +53,8 @@ body .left {
     left: 120px;
     gap: 80px;
     width: 50%;
+    order: 1;
+
 }
 
 body .left .text {
@@ -185,10 +102,12 @@ body .left .img img {
     display: flex;
     justify-content: center;
     align-items: center;
+    order: 2;
 }
 
 .right img {
     width: 100%;
+
     max-width: 900px;
     object-fit: contain;
 }
@@ -353,12 +272,15 @@ body .left .img img {
     justify-content: center;
     position: relative;
 } */
+/* Phần chính */
 .our {
     background-color: #1A74E4;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 20px;
 }
 
 .our_partners {
@@ -368,42 +290,34 @@ body .left .img img {
 }
 
 .our_partners p {
-    font-family: "Space Grotesk", sans-serif;
     font-weight: 700;
     font-size: 48px;
     color: #ffffff;
     margin-bottom: 30px;
 }
 
+/* Grid Logo */
 .partners-container {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     justify-content: center;
     align-items: center;
     max-width: 900px;
+    margin: 0 auto; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 .partner-box img {
     max-width: 100%;
     max-height: 100%;
-}
+    padding: 10px;
 
-/* Căn giữa hàng cuối nếu dư 2 logo */
-.last-row {
-    /* display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        align-items: center; */
-    display: flex;
-    justify-content: center;
-    /* Căn giữa theo chiều ngang */
-    align-items: center;
-    /* Căn giữa theo chiều dọc */
-    grid-column: 2 / span 2;
-    /* Đặt hai phần tử vào giữa */
-    gap: 20px;
 }
 
 .contact {
@@ -484,4 +398,151 @@ body .left .img img {
     left: 388.05px;
     max-width: 650px;
     height: auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+        /* Chữ ở dưới, ảnh ở trên */
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .left {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left .text {
+        width: 90%;
+    }
+
+    .left .text .header {
+        font-size: 40px;
+    }
+
+    .left .text .content {
+        font-size: 14px;
+    }
+
+    .left .img {
+        padding-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .left .img img {
+        width: 40%;
+        /* Tất cả ảnh có kích thước giống nhau */
+        max-width: 200px;
+        /* Giới hạn kích thước để không quá to */
+    }
+
+    .left .img img:last-child {
+        width: 40%;
+        /* max-width: 170px; */
+        align-items: center;
+        /* Ảnh dưới */
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right img {
+        max-width: 100%;
+    }
+
+    .coin {
+        width: 50px;
+    }
+
+    .coin img {
+        width: 40px;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .contact .content {
+        max-width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact .content .text {
+        width: 100%;
+    }
+
+    .contact .content .text p {
+        font-size: 28px;
+        font-weight: bold;
+        /* Bỏ in đậm */
+    }
+
+    .contact .content .text span {
+        font-size: 14px;
+        width: 100%;
+        display: block;
+    }
+
+    .contact .content button {
+        width: 100%;
+        max-width: 90px;
+        font-size: 14px;
+        padding: 10px;
+        margin-top: 30px;
+        /* Tạo khoảng cách lớn hơn với nội dung trên */
+        text-align: left;
+    }
+
+    .contact img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 440px;
+        /* Giảm chiều cao trên mobile để vừa màn hình */
+    }
+
+    .partners-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .partners-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .our_partners p {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .our_partners p {
+        font-size: 28px;
+    }
+
+    .partner-box img {
+        max-width: 80%;
+    }
 }

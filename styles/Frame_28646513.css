@@ -48,14 +48,52 @@
 }
 
 /* Responsive: Khi màn hình nhỏ hơn 600px, xếp dọc */
-@media (max-width: 600px) {
-    .zero1 {
+@media (max-width: 768px) {
+    .Content_conent {
+        display: flex;
         flex-direction: column;
-        text-align: center;
+        /* Xếp dọc */
+        align-items: center;
+        /* Căn giữa */
+        width: 100%;
+        padding: 0 10px;
+    }
 
+    .zero1 {
+        width: 90%;
+        /* Co giãn theo màn hình */
+        max-width: 400px;
+        /* Giới hạn tối đa */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 5px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     }
 
     .zero1 img {
-        width: 90%;
+        width: 80px;
+        /* Giữ kích thước ảnh cố định */
+        height: auto;
+        /* margin-bottom: 5px; */
+    }
+
+    .zero1 .text {
+        max-width: 90%;
+    }
+
+    .zero1 p {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1A74E4;
+    }
+
+    .zero1 span {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #353535;
     }
 }
